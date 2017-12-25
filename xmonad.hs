@@ -47,7 +47,7 @@ myLauncher = "$(yeganesh -x -- -fn '-*-terminus-*-r-normal-*-*-120-*-*-*-*-iso88
 -- Workspaces
 -- The default number of workspaces (virtual screens) and their names.
 --
-myWorkspaces = ["1:term","2:web","3:code","4:vm","5:media"] ++ map show [6..9]
+myWorkspaces = ["1","2","3","4","5"] ++ map show [6..9]
 
 
 ------------------------------------------------------------------------
@@ -65,16 +65,16 @@ myWorkspaces = ["1:term","2:web","3:code","4:vm","5:media"] ++ map show [6..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "Chromium"       --> doShift "2:web"
-    , className =? "Google-chrome"  --> doShift "2:web"
-    , resource  =? "desktop_window" --> doIgnore
-    , className =? "Galculator"     --> doFloat
-    , className =? "Steam"          --> doFloat
-    , className =? "Gimp"           --> doFloat
-    , resource  =? "gpicview"       --> doFloat
-    , className =? "MPlayer"        --> doFloat
-    , className =? "VirtualBox"     --> doShift "4:vm"
-    , className =? "Xchat"          --> doShift "5:media"
+    [ className =? "Chromium"       --> doShift "2"
+--    , className =? "Google-chrome"  --> doShift "2:web"
+--    , resource  =? "desktop_window" --> doIgnore
+--    , className =? "Galculator"     --> doFloat
+--    , className =? "Steam"          --> doFloat
+--    , className =? "Gimp"           --> doFloat
+--    , resource  =? "gpicview"       --> doFloat
+--    , className =? "MPlayer"        --> doFloat
+--    , className =? "VirtualBox"     --> doShift "4:vm"
+--    , className =? "Xchat"          --> doShift "5:media"
     , className =? "stalonetray"    --> doIgnore
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
 

@@ -10,7 +10,7 @@ PATH=$PATH:~/.cabal/bin:~/.xmonad/bin
 # Configure X
 xsetroot -cursor_name left_ptr &
 xrdb -merge ~/.Xdefaults &
-setxkbmap -option "ctrl:nocaps" &
+setxkbmap -option "ctrl:swapcaps" &
 
 # Start a window compositor. This ensures Google Chrome paints correctly.
 xcompmgr -n &
@@ -23,7 +23,7 @@ gnome-terminal &
 gnome-terminal &
 
 # Start a browser
-google-chrome &
+firefox &
 
 # Start screensaver
 gnome-screensaver &
