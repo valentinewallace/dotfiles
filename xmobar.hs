@@ -13,10 +13,10 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                         , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                         , Run BatteryP    ["BAT0"]
                        [ "--template", "Batt: <acstatus>"
-                       , "-L", "15", "-H", "85", "-p", "3"
-                       , "-l", "red", "--normal", "blue", "-h", "green"
+                       , "-L", "15", "-H", "85"
+                       , "-l", "red", "--normal", "blue", "-h", "green", "-p", "3"
                        , "--" -- battery specific options
-                           , "-o", "<left>%", "-O", "<left>%", "-i", "<left>%" 
+                           , "-o", "<left>%", "-O", "<left>%", "-i", "<fc=orange>charging</fc> <left>%" 
                          ] 50
                         , Run Wireless "wlp4s0" ["-t", "<essid> <qualitybar>"] 30
                         , Run StdinReader
