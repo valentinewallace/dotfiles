@@ -1,0 +1,18 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "wait on npm server",
+            "type": "shell",
+            "command": "${workspaceFolder}/node_modules/.bin/wait-on",
+            "args": [
+                "http://localhost:3000"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}
